@@ -33,5 +33,9 @@
       MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
     </script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+    {{ if not .Site.BuildDrafts }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
   </body>
 </html>
