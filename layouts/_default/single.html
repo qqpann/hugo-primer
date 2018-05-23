@@ -5,11 +5,10 @@
 
 {{ define "main" }}
 
-<div>
-  <article >
-    <h1>{{ .Title }}</h1>
-
+<article>
+  <h1>{{ .Title }}</h1>
+  <section>
     {{ .Content }}
-  </article>
-</div>
+  </section>
+</article>
 {{ end }}

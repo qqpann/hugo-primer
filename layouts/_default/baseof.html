@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       {{ block "title" . }}
       {{ .Site.Title }}
@@ -10,16 +11,18 @@
 
     <link rel="stylesheet" href="{{ `assets/syntax.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/primer-build.css` | relURL }}">
+    <link rel="stylesheet" href="{{ `assets/style.css` | relURL }}">
   </head>
   <body>
 
     <div role="main" class="application-main">
-    <div class="container">
-      <div class="boxed-group markdown-body entry-content">
-      {{ block "main" . }}
-      {{ end }}
+      <div class="container">
+        <div class="markdown-body">
+          {{ block "main" . }}
+          This is default message. Main content is missing.
+          {{ end }}
+        </div>
       </div>
-    </div>
     </div>
 
 

@@ -1,0 +1,27 @@
+/* custom css here */
+html, body {
+  width: auto;
+}
+
+/* add responsiveness to primer */
+.container {
+  width: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* 992px以上 */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
