@@ -9,10 +9,18 @@
     </title>
 
     <link rel="stylesheet" href="{{ `assets/syntax.css` | relURL }}">
+    <link rel="stylesheet" href="{{ `assets/primer-build.css` | relURL }}">
   </head>
   <body>
-    {{ block "main" . }}
-    {{ end }}
+
+    <div role="main" class="application-main">
+    <div class="container">
+      <div class="boxed-group markdown-body entry-content">
+      {{ block "main" . }}
+      {{ end }}
+      </div>
+    </div>
+    </div>
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
