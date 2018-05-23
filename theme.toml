@@ -11,8 +11,8 @@ features = []
 min_version = "0.38"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Qiushi Pan"
+  homepage = "https://www.gitshell.net"
 
 # If porting an existing theme
 [original]
