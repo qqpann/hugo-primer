@@ -1,0 +1,32 @@
+
+{{ partial "header.html" }}
+{{ partial "navbar.html" }}
+
+<div>
+
+  <h1>{{ .Title }}</h1>
+
+  <div>
+    {{ .Content }}
+  </div>
+
+  {{ $paginator := .Paginate .Data.Pages }}
+  {{ range $paginator.Pages }}
+  <div>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <div class="article-style">
+      {{ if .Params.summary }}
+      {{ printf "%s" .Params.summary | markdownify }}
+      {{ else if .Truncated }}
+      {{ printf "%s" .Summary | markdownify }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ partial "pagination" . }}
+
+</div>
+
+
+{{ partial "footer.html" }}
