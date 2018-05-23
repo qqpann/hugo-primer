@@ -1,17 +1,45 @@
 
-{{ partial "header.html" }}
-{{ partial "navbar.html" }}
-
+{{ define "main" }}
+<!-- list template -->
 <div>
 
   <h1>{{ .Title }}</h1>
+  {{ .Content }}
 
+  {{ range .Paginator.Pages }}
   <div>
-    {{ .Content }}
+    <div>
+      <a href="{{ .URL }}">
+        <h3>{{ .Title }}</h3>
+      </a>
+      <small>{{ .Permalink }}</small>
+      {{ .Date.Format "2006-01-01" }}
+    </div>
+    {{ .Summary }}
   </div>
+  {{ end }}
+
+  {{ if gt .Paginator.TotalPages 1 }}
+  <ul>
+    {{ if .Paginator.HasPrev }}
+    <li><a href="{{ .Paginator.Prev.URL }}">Prev</a></li>
+    {{ end }}
+
+    {{ range .Paginator.Pagers }}
+    <li>
+      <a href="{{ .URL }}">
+        {{ .PageNumber }}
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+    <li><a href="{{ .Paginator.Next.URL }}">Next</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
 
 
 </div>
 
-
-{{ partial "footer.html" }}
+{{ end }}
