@@ -1,0 +1,13 @@
+<nav class="UnderlineNav UnderlineNav--right">
+  <a class="UnderlineNav-actions h2" href="{{ .Site.BaseURL }}">
+    {{ .Site.Title }}
+  </a>
+
+  {{ with .Site.Menus.main }}
+  <div class="UnderlineNav-body">
+    {{ range sort . }}
+    <a class="UnderlineNav-item" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</nav>
