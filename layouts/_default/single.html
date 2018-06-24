@@ -5,9 +5,9 @@
 
 {{ define "main" }}
 
-<div id="post">
+<div id="post" class="markdown-body">
 
-  <article id="main" class="px-2">
+  <article id="main" class="px-4">
     <h1>{{ .Title }}</h1>
     <section>
       {{ .Content }}
@@ -15,7 +15,7 @@
   </article>
 
   {{ if and (gt .WordCount 40 ) (ne .Params.toc "false") }}
-  <aside id="toc">
+  <aside id="toc" class="pr-3">
     <div class="Box Box--blue toc-box">
       <b>{{.Title}}</b>
       {{ .TableOfContents }}
