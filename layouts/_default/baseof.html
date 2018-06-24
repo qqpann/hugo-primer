@@ -14,20 +14,31 @@
     <link rel="stylesheet" href="{{ `assets/style.css` | relURL }}">
   </head>
   <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white">
 
-    <div class="container-lg px-1 bg-white">
-      {{ partial "header.html" . }}
-    </div>
+      <div id="header" class="px-1 bg-white">
+        {{ partial "header.html" . }}
+      </div>
 
-    <div role="main" class="container-lg bg-white">
-      <div class="markdown-body">
+      <div role="main" id="main" class="holy-main markdown-body px-4">
         {{ block "main" . }}
-        This is default message. Main content is missing.
+        <article>
+          <h1>{{ .Title }}</h1>
+          <section>
+            {{ .Content }}
+          </section>
+        </article>
         {{ end }}
       </div>
+
+      <div id="side" class="pr-3">
+        {{ block "side" . }}
+        {{ end }}
+      </div>
+
     </div>
 
-
+    <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
     <!-- MathJax -->

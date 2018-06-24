@@ -1,27 +1,40 @@
 /* custom css here */
-#post {
-  display: grid;
-  grid-template-columns: auto 230px;
-  grid-template-areas: "main toc";
-}
-#main {
-  display: block;
-  grid-area: main;
-}
-#toc {
-  display: block;
-  grid-area: toc;
-}
-.toc-box {
-  display: block;
-  margin-top: 1.5rem;
-  padding: 0.7rem;
+.h-100 {
+  height: 100%;
 }
 
-#toc ul,
-#toc li,
-#toc ol {
+#holy {
+  display: grid;
+  grid-template-rows: auto calc(100vh - 55px);
+  grid-template-columns: 1fr 230px;
+  grid-template-areas:
+    "header header"
+    "main side";
+}
+#header {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+}
+#main {
+  grid-area: main;
+  overflow: auto;
+}
+#side {
+  grid-area: side;
+  overflow: auto;
+}
+
+#toc * {
   list-style: none;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#toc {
+  margin-top: 1.5rem;
+  padding: 0.7rem;
 }
 #toc ul {
   padding-left: 0.8rem;
@@ -29,22 +42,16 @@
 #toc li {
   margin-top: 0.3rem;
 }
-#toc a {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 @media screen and (max-width: 1012px) {
-  #post {
+  #holy {
     display: block;
-    padding-left: 0;
-    padding-right: 0;
+  }
+  #header {
   }
   #main {
   }
-  #toc {
+  #side {
     display: none;
   }
 }
