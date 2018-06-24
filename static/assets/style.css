@@ -22,6 +22,7 @@
   width: 230px;
 }
 aside {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   max-height: 100vh;

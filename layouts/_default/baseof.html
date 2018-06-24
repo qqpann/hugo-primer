@@ -20,7 +20,7 @@
         {{ partial "header.html" . }}
       </div>
 
-      <div role="main" id="main" class="holy-main markdown-body px-4">
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
         {{ block "main" . }}
         <article>
           <h1>{{ .Title }}</h1>
@@ -31,7 +31,7 @@
         {{ end }}
       </div>
 
-      <div id="side" class="pr-1">
+      <div id="side" class="pr-1 bg-white">
         <aside class="pr-3">
           {{ block "side" . }}
           {{ end }}
