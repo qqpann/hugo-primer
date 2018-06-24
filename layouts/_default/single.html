@@ -7,7 +7,7 @@
 
 <div id="post">
 
-  <article id="main">
+  <article id="main" class="px-2">
     <h1>{{ .Title }}</h1>
     <section>
       {{ .Content }}
@@ -17,7 +17,7 @@
   {{ if and (gt .WordCount 40 ) (ne .Params.toc "false") }}
   <aside id="toc">
     <div class="Box Box--blue toc-box">
-      <b class="css-truncate css-truncate-target">{{.Title}}</b>
+      <b>{{.Title}}</b>
       {{ .TableOfContents }}
     </div>
   </aside>

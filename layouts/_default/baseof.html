@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="{{ `assets/primer-build.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/style.css` | relURL }}">
   </head>
-  <body>
+  <body class="bg-gray">
 
-    <div class="container-lg px-3">
+    <div class="container-lg px-1 bg-white">
       {{ partial "header.html" . }}
     </div>
 
-    <div role="main" class="container-lg px-3">
+    <div role="main" class="container-lg px-3 bg-white">
       <div class="markdown-body">
         {{ block "main" . }}
         This is default message. Main content is missing.

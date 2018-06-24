@@ -3,20 +3,19 @@
   display: grid;
   grid-template-columns: auto 230px;
   grid-template-areas: "main toc";
-  padding-left: 2rem;
-  padding-right: 1rem;
+  grid-column-gap: 1rem;
 }
 #main {
+  display: block;
   grid-area: main;
 }
 #toc {
+  display: block;
   grid-area: toc;
 }
 .toc-box {
   margin-top: 1.5rem;
-  margin-left: 1.5rem;
-  margin-right: 1rem;
-  padding: 6px;
+  padding: 0.7rem;
 }
 
 #toc ul,
