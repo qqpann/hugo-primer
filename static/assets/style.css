@@ -5,36 +5,40 @@
 
 #holy {
   display: grid;
-  grid-template-rows: auto calc(100vh - 55px);
-  grid-template-columns: 1fr 230px;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr auto;
   grid-template-areas:
     "header header"
     "main side";
 }
 #header {
   grid-area: header;
-  position: sticky;
-  top: 0;
 }
 #main {
   grid-area: main;
-  overflow: auto;
 }
 #side {
   grid-area: side;
-  overflow: auto;
+  width: 230px;
+}
+aside {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  display: block;
+  overflow-y: scroll;
 }
 
+#toc {
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+}
 #toc * {
   list-style: none;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-#toc {
-  margin-top: 1.5rem;
-  padding: 0.7rem;
 }
 #toc ul {
   padding-left: 0.8rem;
