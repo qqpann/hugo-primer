@@ -3,12 +3,12 @@
 
 name = "Theer"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
-min_version = "0.38"
+licenselink = "https://github.com/qiugits/theer/blob/master/LICENSE.md"
+description = "A simple and beautiful Hugo theme based on Primer css"
+homepage = "https://www.gitshell.net/"
+tags = ["blog", "simple"]
+features = ["blog"]
+min_version = 0.1
 
 [author]
   name = "Qiushi Pan"
