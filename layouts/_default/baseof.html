@@ -15,17 +15,15 @@
   </head>
   <body>
 
-    <div class="container-md px-3">
+    <div class="container-lg px-3">
       {{ partial "header.html" . }}
     </div>
 
-    <div role="main" class="application-main">
-      <div class="container-md px-3">
-        <div class="markdown-body">
-          {{ block "main" . }}
-          This is default message. Main content is missing.
-          {{ end }}
-        </div>
+    <div role="main" class="container-lg px-3">
+      <div class="markdown-body">
+        {{ block "main" . }}
+        This is default message. Main content is missing.
+        {{ end }}
       </div>
     </div>
 

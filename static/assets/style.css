@@ -1,1 +1,51 @@
 /* custom css here */
+#post {
+  display: grid;
+  grid-template-columns: auto 230px;
+  grid-template-areas: "main toc";
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+#main {
+  grid-area: main;
+}
+#toc {
+  grid-area: toc;
+}
+.toc-box {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1rem;
+  padding: 6px;
+}
+
+#toc ul,
+#toc li,
+#toc ol {
+  list-style: none;
+}
+#toc ul {
+  padding-left: 0.8rem;
+}
+#toc li {
+  margin-top: 0.3rem;
+}
+#toc a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1012px) {
+  #post {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #main {
+  }
+  #toc {
+    display: none;
+  }
+}

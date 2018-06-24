@@ -5,10 +5,24 @@
 
 {{ define "main" }}
 
-<article>
-  <h1>{{ .Title }}</h1>
-  <section>
-    {{ .Content }}
-  </section>
-</article>
+<div id="post">
+
+  <article id="main">
+    <h1>{{ .Title }}</h1>
+    <section>
+      {{ .Content }}
+    </section>
+  </article>
+
+  {{ if and (gt .WordCount 40 ) (ne .Params.toc "false") }}
+  <aside id="toc">
+    <div class="Box Box--blue toc-box">
+      <b class="css-truncate css-truncate-target">{{.Title}}</b>
+      {{ .TableOfContents }}
+    </div>
+  </aside>
+  {{ end }}
+
+</div>
+
 {{ end }}
