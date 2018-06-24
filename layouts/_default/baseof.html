@@ -22,18 +22,14 @@
 
       <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
         {{ block "main" . }}
-        <article>
-          <h1>{{ .Title }}</h1>
-          <section>
-            {{ .Content }}
-          </section>
-        </article>
         {{ end }}
       </div>
 
       <div id="side" class="pr-1 bg-white">
         <aside class="pr-3">
           {{ block "side" . }}
+          <div id="toc" class="mb-3">
+          </div>
           {{ end }}
         </aside>
       </div>
