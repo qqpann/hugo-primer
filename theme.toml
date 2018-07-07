@@ -8,7 +8,7 @@ description = "A simple and beautiful Hugo theme based on Primer css"
 homepage = "https://www.gitshell.net/"
 tags = ["blog", "simple"]
 features = ["blog"]
-min_version = 0.1
+min_version = 0.40
 
 [author]
   name = "Qiushi Pan"
