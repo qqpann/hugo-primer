@@ -3,11 +3,54 @@
     {{ .Site.Title }}
   </a>
 
+  {{ $currentPage := . }}
   {{ with .Site.Menus.main }}
   <div class="UnderlineNav-body">
     {{ range sort . }}
-    <a class="UnderlineNav-item" href="{{ .URL }}">{{ .Name }}</a>
+    {{ if .HasChildren }}
+    <a class="UnderlineNav-item menu-parent {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" onclick="myFunction()" href="#">
+      {{ .Pre }}
+      <span>{{ .Name }}</span>
+    </a>
+    <div id="myDropdown" class="Box Box--condensed menu-children">
+      {{ range .Children }}
+      <a href="{{ .URL }}" class="Box-body {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+        {{ .Name }}
+      </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <a class="UnderlineNav-item" href="{{ .URL }}">
+      {{ .Pre }}
+      <span>{{ .Name }}</span>
+    </a>
+    {{ end }}
     {{ end }}
   </div>
   {{ end }}
 </nav>
+
+<style type="text/css">
+.menu-children {
+  display: none;
+}
+.show {
+  display: block;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+function myFunction() {
+  $("#myDropdown").toggleClass("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.menu-parent')) {
+    if ($("#myDropdown").hasClass('show')) {
+      $("#myDropdown").removeClass('show');
+    }
+  }
+}
+</script>
