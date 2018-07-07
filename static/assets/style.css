@@ -31,6 +31,32 @@ aside {
   overflow-y: scroll;
 }
 
+/* Menu */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-content:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+  top: 55px;
+  right: 0;
+  white-space: nowrap;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* TOC */
 #toc {
   margin-top: 1.5rem;
   padding: 0.7rem;
