@@ -8,19 +8,21 @@
   <div class="UnderlineNav-body">
     {{ range sort . }}
     {{ if .HasChildren }}
-    <a class="UnderlineNav-item menu-parent {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" onclick="myFunction()" href="#">
+    <div class="flex-column position-relative dropdown" >
       {{ .Pre }}
-      <span>{{ .Name }}</span>
-    </a>
-    <div id="myDropdown" class="Box Box--condensed menu-children">
-      {{ range .Children }}
-      <a href="{{ .URL }}" class="Box-body {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-        {{ .Name }}
-      </a>
-      {{ end }}
+      <span class="UnderlineNav-item {{ if $currentPage.HasMenuCurrent "main" . }}selected{{ end }}">{{ .Name }}</span>
+      <div class="Box Box--condensed position-absolute dropdown-content ">
+        {{ range .Children }}
+        <div class="Box-body" style="">
+          <a href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </div>
+        {{ end }}
+      </div>
     </div>
     {{ else }}
-    <a class="UnderlineNav-item" href="{{ .URL }}">
+    <a class="UnderlineNav-item {{ if $currentPage.IsMenuCurrent "main" . }}selected{{ end }}" href="{{ .URL }}">
       {{ .Pre }}
       <span>{{ .Name }}</span>
     </a>
@@ -31,11 +33,31 @@
 </nav>
 
 <style type="text/css">
-.menu-children {
-  display: none;
+.hidden {
+  display: none !important;
 }
-.show {
-  display: block;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-content:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+  top: 55px;
+  right: 0;
+  white-space: nowrap;
+  min-width: 160px;
+  z-index: 1;
 }
 </style>
 
@@ -44,12 +66,12 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript">
 function myFunction() {
-  $("#myDropdown").toggleClass("show");
+  $("#myDropdown").toggleClass("hidden");
 }
 window.onclick = function(e) {
   if (!e.target.matches('.menu-parent')) {
-    if ($("#myDropdown").hasClass('show')) {
-      $("#myDropdown").removeClass('show');
+    if ($("#myDropdown").hasClass('hidden')) {
+      $("#myDropdown").removeClass('hidden');
     }
   }
 }
