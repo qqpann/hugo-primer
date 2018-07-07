@@ -24,23 +24,29 @@
   {{ end }}
 
   {{ if gt .Paginator.TotalPages 1 }}
-  <ul>
-    {{ if .Paginator.HasPrev }}
-    <li><a href="{{ .Paginator.Prev.URL }}">Prev</a></li>
-    {{ end }}
+  <nav class="paginate-container">
+    <div class="pagination">
+      <ul>
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="previous_page">Prev</a>
+        {{ else }}
+        <span class="previous_page disabled">Prev</span>
+        {{ end }}
 
-    {{ range .Paginator.Pagers }}
-    <li>
-      <a href="{{ .URL }}">
-        {{ .PageNumber }}
-        </a>
-    </li>
-    {{ end }}
+        {{ range .Paginator.Pagers }}
+          <a href="{{ .URL }}">
+            {{ .PageNumber }}
+          </a>
+        {{ end }}
 
-    {{ if .Paginator.HasNext }}
-    <li><a href="{{ .Paginator.Next.URL }}">Next</a></li>
-    {{ end }}
-  </ul>
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="next_page">Next</a>
+        {{ else }}
+        <span class="next_page disabled">Next</span>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
   {{ end }}
 
 
