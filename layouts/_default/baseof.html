@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {{ if not .Site.BuildDrafts }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
@@ -8,6 +11,34 @@
       {{ .Site.Title }}
       {{ end }}
     </title>
+    {{ with .Keywords }}
+    <meta content="{{ delimit . `, ` }}" name="keywords">
+    {{ end }}
+    {{ if .Description }}
+    <meta name="description" property="og:description" content="{{ .Description }}|{{ .Site.Params.Description }}">
+    {{ else if .IsPage }}
+    <meta name="description" property="og:description" content="{{ .Summary | plainify }}|{{ .Site.Params.SiteDescription }}">
+    {{ else }}
+    <meta name="description" property="og:description" content="{{ .Site.Params.Description }}">
+    {{ end }}
+
+    <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+    <!-- favicon & touch-icon -->
+    {{ if .Site.Params.UseIcon }}
+    <link rel="icon" href="favicon-64.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="mask-icon" size="any" href="pinned-icon.svg">
+    {{ end }}
+    <!-- Twitter Card -->
+    {{ if .Site.Params.UseTwitterCard }}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
+    <meta name="twitter:creator" content="@{{ .Site.Params.Twitter }}">
+    <meta name="twitter:title" content="{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Description | default .Summary }}|{{ .Site.Params.Description }}">
+    <meta name="twitter:image" content="twitter-card.png">
+    {{ end }}
+
 
     <link rel="stylesheet" href="{{ `assets/syntax.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/primer-build.css` | relURL }}">
@@ -37,16 +68,9 @@
     </div>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- MathJax -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-    </script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
-
-    {{ if not .Site.BuildDrafts }}
-    {{ template "_internal/google_analytics_async.html" . }}
-    {{ end }}
   </body>
 </html>
