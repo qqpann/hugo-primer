@@ -17,7 +17,7 @@
     {{ if .Description }}
     <meta name="description" property="og:description" content="{{ .Description }}|{{ .Site.Params.Description }}">
     {{ else if .IsPage }}
-    <meta name="description" property="og:description" content="{{ .Summary | plainify }}|{{ .Site.Params.SiteDescription }}">
+    <meta name="description" property="og:description" content="{{ .Summary | plainify }}|{{ .Site.Params.Description }}">
     {{ else }}
     <meta name="description" property="og:description" content="{{ .Site.Params.Description }}">
     {{ end }}
