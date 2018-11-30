@@ -13,20 +13,15 @@
   {{ range .Paginator.Pages }}
   <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-2">
     <!-- single page card -->
-    <div class="Subhead mb-2">
-      <div class="Subhead-description">
-        aaa
-        <a href="{{ .URL }}">
-          <div class="h2 mt-1 mb-1 link-gray-dark">{{ .Title }}</div>
-        </a>
-        <div class="float-md-right">
-          <span>{{ .Date.Format "2006-01-01" }}</span>
-        </div>
-      </div>
+    <div class="mb-2">
+      <a href="{{ .URL }}" class="link-gray-dark"><span class="h2">{{ .Title }}</span></a>
+      <span class="text-right Counter Counter--gray">{{ .Pages | len }}</span>
     </div>
     <div class="text-gray">
-      <!-- summary -->
-      {{ .Summary }}
+      {{ range first 10 .Pages }}
+      <a class="btn btn-transparent bg-blue-light link-gray mb-2" href="{{ .URL }}" role="button">
+      {{ .Title }}</a>
+      {{ end }}
     </div>
   </div>
   {{ end }}
