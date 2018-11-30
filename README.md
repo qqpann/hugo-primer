@@ -7,7 +7,7 @@ Theer is a theme based on GitHub style css: Primer, and adds some blog like feat
 
 Try it now, and leave me a star if you like it!
 
-![screenshot](https://github.com/hanpannet/theer/blob/master/images/screenshot.png)
+![screenshot](https://github.com/qqhann/theer/blob/master/images/screenshot.png)
 
 ## Features and TODOs
 - [x] Primer css like theme
@@ -20,7 +20,7 @@ Try it now, and leave me a star if you like it!
 ## Installation
 Clone to your theme directory:
 ```terminal
-$ git clone https://github.com/hanpannet/theer.git themes/theer
+$ git clone https://github.com/qqhann/theer.git themes/theer
 
 $ hugo server --theme=theer
 ```
