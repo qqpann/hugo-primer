@@ -3,16 +3,16 @@
 
 name = "Theer"
 license = "MIT"
-licenselink = "https://github.com/qiugits/theer/blob/master/LICENSE.md"
+licenselink = "https://github.com/qqhann/theer/blob/master/LICENSE.md"
 description = "A simple and beautiful Hugo theme based on Primer css"
-homepage = "https://www.gitshell.net/"
+homepage = "https://qqhann.info/"
 tags = ["blog", "simple"]
 features = ["blog"]
 min_version = 0.40
 
 [author]
   name = "Qiushi Pan"
-  homepage = "https://www.gitshell.net"
+  homepage = "https://qqhann.info"
 
 # If porting an existing theme
 [original]
