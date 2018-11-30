@@ -2,7 +2,7 @@
 <!-- categories -->
 {{ with .Params.Categories }}{{ range . }}
 <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="muted-link">
-  <span class="Label Label--gray">{{ . }}</span>
+  <span class="Label Label--outline bg-blue-light">{{ . }}</span>
 </a>
 {{ end }}{{ end }}
 <!-- tags -->

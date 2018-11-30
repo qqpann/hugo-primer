@@ -12,7 +12,9 @@
   </div>
   <div class="Subhead-description">
     {{ partial "taxonomy.html" . }}
-    <span class="float-md-right">{{ .Date.Format "2006-01-01" }}</span>
+    <div class="float-md-right">
+      <span>{{ .Date.Format "2006-01-01" }}</span>
+    </div>
   </div>
 </div>
 <article>
