@@ -11,18 +11,34 @@
   {{ .Content }}
 
   {{ range .Paginator.Pages }}
-  <div>
-    <div>
-      <a href="{{ .URL }}">
-        <h3>{{ .Title }}</h3>
-      </a>
-      <small>{{ .Permalink }}</small>
-      {{ .Date.Format "2006-01-01" }}
+  <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-2">
+    <!-- single page card -->
+    <div class="Subhead mb-2">
+      <div class="Subhead-heading">
+        <a href="{{ .URL }}">
+          <h4 class="mt-1 mb-1">{{ .Title }}</h4>
+        </a>
+      </div>
+      <div class="Subhead-description">
+        <!-- categories -->
+        {{ with .Params.Categories }}{{ range . }}
+        <span class="Label Label--gray-darker">{{ . }}</span>
+        {{ end }}{{ end }}
+        <!-- tags -->
+        {{ with .Params.Tags }}{{ range . }}
+        <span class="Label Label--gray">{{ . }}</span>
+        {{ end }}{{ end }}
+        <span>{{ .Date.Format "2006-01-01" }}</span>
+      </div>
     </div>
-    {{ .Summary }}
+    <div>
+      <!-- summary -->
+      {{ .Summary }}
+    </div>
   </div>
   {{ end }}
 
+  <!-- paginator nav -->
   {{ if gt .Paginator.TotalPages 1 }}
   <nav class="paginate-container">
     <div class="pagination">
