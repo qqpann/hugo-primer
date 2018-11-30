@@ -22,13 +22,19 @@
       <div class="Subhead-description">
         <!-- categories -->
         {{ with .Params.Categories }}{{ range . }}
-        <span class="Label Label--gray-darker">{{ . }}</span>
+        <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="muted-link">
+        <span class="Label Label--gray-darker">
+          {{ . }}
+        </span>
+        </a>
         {{ end }}{{ end }}
         <!-- tags -->
         {{ with .Params.Tags }}{{ range . }}
+        <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="muted-link">
         <span class="Label Label--gray">{{ . }}</span>
         {{ end }}{{ end }}
         <span>{{ .Date.Format "2006-01-01" }}</span>
+        </a>
       </div>
     </div>
     <div>
