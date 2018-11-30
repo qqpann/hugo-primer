@@ -11,19 +11,8 @@
     <div class="h1 mt-3 mb-1">{{ .Title }}</div>
   </div>
   <div class="Subhead-description">
-    <!-- categories -->
-    {{ with .Params.Categories }}{{ range . }}
-    <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="muted-link">
-      <span class="Label Label--gray">{{ . }}</span>
-    </a>
-    {{ end }}{{ end }}
-    <!-- tags -->
-    {{ with .Params.Tags }}{{ range . }}
-    <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="muted-link">
-      <span class="Label Label--outline">{{ . }}</span>
-    </a>
-    {{ end }}{{ end }}
-    <span>{{ .Date.Format "2006-01-01" }}</span>
+    {{ partial "taxonomy.html" . }}
+    <span class="float-md-right">{{ .Date.Format "2006-01-01" }}</span>
   </div>
 </div>
 <article>
