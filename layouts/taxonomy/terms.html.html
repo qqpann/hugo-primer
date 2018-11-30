@@ -19,8 +19,7 @@
     </div>
     <div class="text-gray">
       {{ range first 10 .Pages }}
-      <a class="btn btn-transparent bg-blue-light link-gray mb-2" href="{{ .URL }}" role="button">
-      {{ .Title }}</a>
+      <a class="btn btn-transparent bg-blue-light link-gray mb-2" href="{{ .URL }}" role="button">{{ .Title }}</a>
       {{ end }}
     </div>
   </div>
