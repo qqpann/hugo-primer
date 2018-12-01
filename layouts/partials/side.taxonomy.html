@@ -1,0 +1,29 @@
+<!-- Tags -->
+{{ if isset .Site.Taxonomies "tags" }}
+  <div class="Box Box--blue p-2 mb-3 mt-5">
+    <a href="{{ "tags/" | relLangURL }}" class="link-gray-dark">
+      <h4>Tags</h4>
+    </a>
+    {{ range $name, $items := .Site.Taxonomies.tags }}
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}" class="link-gray text-emphasized css-truncate-target"><span class="">{{ $name | humanize }}</span></a>
+      <span class="text-right Counter">{{ len $items }}</span>
+    </span>
+    {{ end }}
+  </div>
+{{ end }}
+
+<!-- Categories -->
+{{ if isset .Site.Taxonomies "categories" }}
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="{{ "categories/" | relLangURL }}" class="link-gray-dark">
+      <h4>Categories</h4>
+    </a>
+    {{ range $name, $items := .Site.Taxonomies.categories }}
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}" class="link-gray text-emphasized css-truncate-target"><span class="">{{ $name | humanize }}</span></a>
+      <span class="text-right Counter">{{ len $items }}</span>
+    </span>
+    {{ end }}
+  </div>
+{{ end }}
