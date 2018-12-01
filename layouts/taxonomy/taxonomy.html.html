@@ -11,26 +11,8 @@
   {{ .Content }}
 
   {{ range .Paginator.Pages }}
-  <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-2">
     <!-- single page card -->
-    <div class="Subhead mb-2">
-      <div class="Subhead-heading">
-        <a href="{{ .URL }}">
-          <div class="h2 mt-1 mb-1 link-gray-dark">{{ .Title }}</div>
-        </a>
-      </div>
-      <div class="Subhead-description">
-        {{ partial "taxonomy.html" . }}
-        <div class="float-md-right">
-          <span>{{ .Date.Format "2006-01-01" }}</span>
-        </div>
-      </div>
-    </div>
-    <div class="text-gray">
-      <!-- summary -->
-      {{ .Summary }}
-    </div>
-  </div>
+    {{ partial "card.page.html" . }}
   {{ end }}
 
   <!-- paginator nav -->
