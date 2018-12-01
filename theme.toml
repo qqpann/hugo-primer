@@ -4,11 +4,11 @@
 name = "Theer"
 license = "MIT"
 licenselink = "https://github.com/qqhann/theer/blob/master/LICENSE.md"
-description = "A simple and beautiful Hugo theme based on Primer css"
-homepage = "https://qqhann.info/"
-tags = ["blog", "simple"]
-features = ["blog"]
-min_version = 0.40
+description = "A simple and beautiful Hugo theme based on GitHub's Primer CSS"
+homepage = "https://github.com/qqhann/theer"
+tags = ["blog", "simple", "minimal", "clean", "personal", "syntax highlighting", "white", "light", "simple page", "technical"]
+features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inline", "tags", "categories", "social", "share", "share button", "social share"]
+min_version = 0.3
 
 [author]
   name = "Qiushi Pan"
