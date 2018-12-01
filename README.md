@@ -15,7 +15,8 @@ Try it now, and leave me a star if you like it!
 - [x] Colored code pen
 - [x] Math inline
 - [x] Awesome TOC
-- [ ] Tags
+- [x] Tags & Categories
+- [x] Social Share buttons
 
 ## Installation
 Clone to your theme directory:
