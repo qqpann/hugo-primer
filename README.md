@@ -27,6 +27,8 @@ $ hugo server --theme=theer
 ```
 
 ## Usage
+
+#### config.toml
 You can configure Theer behavior with these params in your blog's `config.toml`. Shown are defaults and most recommended configs.
 ```config.toml
 # config.toml
@@ -73,6 +75,31 @@ useTwitterCard = true
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
 creditTheer = true
 ```
+
+#### archetypes/default.md
+It is also recommended to remove your site's `archetypes/default.md`, or copy Theer's `archetypes/default.md` to your site.
+```archetypes/default.md
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+categories:
+tags:
+keywords:
+---
+```
+
+Example usage:
+```
+---
+categories:
+- Diary
+tags:
+- Shopping
+- Health
+---
+```
+Set keywords for seo.
 
 ## Contributing
 Issues and PRs are welcome. :)
