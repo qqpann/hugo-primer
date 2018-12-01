@@ -11,12 +11,12 @@
   {{ .Content }}
 
   {{ range .Paginator.Pages }}
-  <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-2">
+  <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
     <!-- single page card -->
     <div class="Subhead mb-2">
       <div class="Subhead-heading">
         <a href="{{ .URL }}">
-          <div class="h2 mt-1 mb-1 link-gray-dark">{{ .Title }}</div>
+          <div class="h2 mt-1 mb-1">{{ .Title }}</div>
         </a>
       </div>
       <div class="Subhead-description">

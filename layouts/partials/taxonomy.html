@@ -2,12 +2,12 @@
 <!-- categories -->
 {{ with .Params.Categories }}{{ range . }}
 <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="muted-link">
-  <span class="Label Label--outline bg-blue-light">{{ . }}</span>
+  <span class="Label Label--gray-darker">{{ . }}</span>
 </a>
 {{ end }}{{ end }}
 <!-- tags -->
 {{ with .Params.Tags }}{{ range . }}
 <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="muted-link">
-  <span class="Label Label--outline">{{ . }}</span>
+  <span class="Label Label--gray">{{ . }}</span>
 </a>
 {{ end }}{{ end }}
