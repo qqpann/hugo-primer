@@ -1,11 +1,11 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Theer"
+name = "Hugo-Primer"
 license = "MIT"
-licenselink = "https://github.com/qqhann/theer/blob/master/LICENSE.md"
+licenselink = "https://github.com/qqhann/hugo-primer/blob/master/LICENSE.md"
 description = "A simple and beautiful Hugo theme based on GitHub's Primer CSS"
-homepage = "https://github.com/qqhann/theer"
+homepage = "https://github.com/qqhann/hugo-primer"
 tags = ["blog", "simple", "minimal", "clean", "personal", "syntax highlighting", "white", "light", "simple page", "technical"]
 features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inline", "tags", "categories", "social", "share", "share button", "social share"]
 # Hugo version

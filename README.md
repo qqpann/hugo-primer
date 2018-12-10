@@ -1,13 +1,13 @@
-# Theer
+# Hugo-Primer
 
 **A simple and beautiful Hugo theme based on GitHub's Primer CSS** | **[日本語記事](https://qqhann.info/blog/theer-stroy/)**
 
 This theme would be a perfect fit if you are used to GitHub style pages.  
-Theer is a theme based on GitHub style css: Primer, and adds some blog like features onto it.
+Hugo-Primer is a theme based on GitHub style css: Primer, and adds some blog like features onto it.
 
 Try it now, and leave me a star if you like it!
 
-![screenshot](https://github.com/qqhann/theer/blob/master/images/screenshot.png)
+![screenshot](https://github.com/qqhann/hugo-primer/blob/master/images/screenshot.png)
 
 ## Features
 - [x] Primer css like theme
@@ -21,15 +21,15 @@ Try it now, and leave me a star if you like it!
 ## Installation
 Clone to your theme directory:
 ```terminal
-$ git clone https://github.com/qqhann/theer.git themes/theer
+$ git clone https://github.com/qqhann/hugo-primer.git themes/hugo-primer
 
-$ hugo server --theme=theer
+$ hugo server --theme=hugo-primer
 ```
 
 ## Usage
 
 #### config.toml
-You can configure Theer behavior with these params in your blog's `config.toml`. Shown are defaults and most recommended configs.
+You can configure Hugo-Primer behavior with these params in your blog's `config.toml`. Shown are defaults and most recommended configs.
 ```config.toml
 # config.toml
 
@@ -42,7 +42,7 @@ pygmentsUseClasses = true
 # Chose Social Sharing Buttons you want to use.
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
 # You may disable copyright sentence by setting this to false.
-creditTheer = true
+creditHugoPrimer = true
 ```
 
 That being said, below is all recommended configurations.
@@ -51,7 +51,7 @@ That being said, below is all recommended configurations.
 
 baseURL = "https://your_web_site"
 title = "Your Blog"
-theme = "theer"
+theme = "hugo-primer"
 languageCode = "ja"
 # If you are using Chinese, Japanese, or Korean, I highly recommend you to set this true.
 hasCJKLanguage = true
@@ -73,11 +73,11 @@ useIcon = true
 useTwitterCard = true
 
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
-creditTheer = true
+creditHugoPrimer = true
 ```
 
 #### archetypes/default.md
-It is also recommended to remove your site's `archetypes/default.md`, or copy Theer's `archetypes/default.md` to your site.
+It is also recommended to remove your site's `archetypes/default.md`, or copy Hugo-Primer's `archetypes/default.md` to your site.
 ```archetypes/default.md
 ---
 title: "{{ replace .Name "-" " " | title }}"
