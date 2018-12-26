@@ -19,8 +19,12 @@
 </div>
 <article>
   <!-- Content -->
-  <section>
+  <section class="pb-6 mb-3 border-bottom">
     {{ .Content }}
+  </section>
+
+  <section>
+    {{ template "_internal/disqus.html" . }}
   </section>
 </article>
 {{ end }}
@@ -60,7 +64,7 @@
     {{ end }}
   {{ else }}
     <div>
-      Do not share.
+      <!-- Do not share -->
     </div>
   {{ end }}
 {{ end }}

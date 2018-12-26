@@ -67,15 +67,15 @@
         </aside>
       </div>
 
-    </div>
-
     {{ if (default true .Site.Params.CreditHugoPrimer) }}
-    <div class="container-lg">
-      <span class="text-small text-gray float-right p-1">
+    <div class="container-lg pt-2 pb-3">
+      <span class="text-small text-gray">
         {{ partial "copyright.html" . }}
       </span>
     </div>
     {{ end }}
+    </div>
+
 
     <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
