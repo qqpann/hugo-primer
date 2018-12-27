@@ -24,7 +24,9 @@
   </section>
 
   <section>
-    {{ template "_internal/disqus.html" . }}
+    {{ if (default true .Params.comments) }}
+      {{ template "_internal/disqus.html" . }}
+    {{ end }}
   </section>
 </article>
 {{ end }}
