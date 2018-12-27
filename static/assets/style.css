@@ -1,15 +1,22 @@
 /* custom css here */
+html,
+body {
+  height: 100%;
+}
 .h-100 {
   height: 100%;
 }
 
 #holy {
   display: grid;
-  grid-template-rows: auto 1fr;
+  /* auto: as wide as its content
+   * fr: all available space */
   grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header"
-    "main side";
+    "main side"
+    "footer side";
 }
 #header {
   grid-area: header;
@@ -21,6 +28,9 @@
 #side {
   grid-area: side;
   width: 230px;
+}
+#footer {
+  grid-area: footer;
 }
 aside {
   position: -webkit-sticky;
