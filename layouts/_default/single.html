@@ -15,11 +15,11 @@
 
     {{ if ( default true .Params.showDate ) }}
     <div class="float-md-right">
-      <span title="Lastmod: {{ .Lastmod.Format "2006-01-01" }}. Published at: {{ .PublishDate.Format "2006-01-01" }}.">
+      <span title="Lastmod: {{ .Lastmod.Format "2006-01-02" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
         {{ if ne .Lastmod .PublishDate }}
-          Lastmod: {{ dateFormat ( default "2006-01-01" .Site.Params.dateFormat ) .Lastmod }}
+          Lastmod: {{ dateFormat ( default "2006-01-02" .Site.Params.dateFormat ) .Lastmod }}
         {{ else }}
-          Published: {{ dateFormat "2006-01-01" .PublishDate }}
+          Published: {{ dateFormat "2006-01-02" .PublishDate }}
         {{ end }}
       </span>
     </div>
