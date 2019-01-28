@@ -38,7 +38,7 @@ aside {
   top: 0;
   max-height: 100vh;
   display: block;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Menu */
