@@ -68,11 +68,7 @@
       </div>
 
       <div id="footer" class="pt-2 pb-3 bg-white text-center">
-        {{ if (default true .Site.Params.CreditHugoPrimer) }}
-          <span class="text-small text-gray">
-            {{ partial "copyright.html" . }}
-          </span>
-        {{ end }}
+        {{ partial "footer.html" . }}
       </div>
     </div>
 
