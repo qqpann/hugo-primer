@@ -38,14 +38,18 @@ hasCJKLanguage = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&copy;`.
+copyright = ""
+
 [params]
 # Chose Social Sharing Buttons you want to use.
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
 # You may disable copyright sentence by setting this to false.
-creditHugoPrimer = true
+showFooterCredits = true
 ```
 
-That being said, below is all recommended configurations.
+That being said, below is all recommended configuration example.
 ```config.toml
 # config.toml
 
@@ -61,6 +65,10 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 googleAnalytics = "U-12345678-0"
 
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&copy;`.
+copyright = "&copy;Your Name 2019"
+
 [frontmatter]
 # update sitemap.xml's lastmod datetime by file change time, instead of git.
 lastmod = ["lastmod", ":fileModTime", ":default"]
@@ -73,7 +81,7 @@ useIcon = true
 useTwitterCard = true
 
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
-creditHugoPrimer = true
+showFooterCredits = true
 ```
 
 #### archetypes/default.md
