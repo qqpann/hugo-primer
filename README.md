@@ -49,7 +49,7 @@ shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
 showFooterCredits = true
 ```
 
-That being said, below is all recommended configurations.
+That being said, below is all recommended configuration example.
 ```config.toml
 # config.toml
 
@@ -67,7 +67,7 @@ googleAnalytics = "U-12345678-0"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = ""
+copyright = "&copy;Your Name 2019"
 
 [frontmatter]
 # update sitemap.xml's lastmod datetime by file change time, instead of git.
