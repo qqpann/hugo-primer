@@ -43,8 +43,12 @@ pygmentsUseClasses = true
 copyright = ""
 
 [params]
-# Chose Social Sharing Buttons you want to use.
+# Chose Social Sharing Buttons at side column you want to use.
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
+
+# Chose Social Sharing Buttons under the main column you want to use.
+shareTo_main = ["Twitter", "Hatena", "Facebook", "Pocket"]
+
 # You may disable copyright sentence by setting this to false.
 showFooterCredits = true
 ```
