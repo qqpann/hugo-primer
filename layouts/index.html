@@ -7,21 +7,31 @@
 <!-- list template -->
 <div>
 
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<h1>{{ .Title }}</h1>
 
-  {{ range .Paginator.Pages }}
+{{ .Content }}
+
+{{ range .Paginator.Pages }}
+<div>
   <div>
-    <div>
+    <div align="left">
       <a href="{{ .URL }}">
         <h3>{{ .Title }}</h3>
       </a>
-      <small>{{ .Permalink }}</small>
-      {{ .Date.Format "2006-01-02" }}
     </div>
+    <!-- <small>{{ .Permalink }}</small> -->
+    <div align="right">
+      <small>
+        {{ .Date.Format "2006-01-02" }}
+      </small>
+    </div>
+  </div>
+
+  <div style="margin:5px">
     {{ .Summary }}
   </div>
-  {{ end }}
+</div>
+{{ end }}
 
   {{ if gt .Paginator.TotalPages 1 }}
   <nav class="paginate-container">
