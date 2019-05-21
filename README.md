@@ -109,6 +109,20 @@ tags:
 ```
 Set keywords for seo.
 
+#### ruby annotation
+
+[ruby annotation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby) allows you to show pronunciation of characters. Ruby in hugo-primer is like this:
+
+![ruby](/images/ruby.png)
+
+You just need one line shortcodes code:
+
+```
+{{< ruby rb="深表遗憾" rt="Xi Wen Le Jian" >}}
+
+{{< ruby rb="My heart is broken." rt="I'm happy for that." >}}
+```
+
 ## Contributing
 Issues and PRs are welcome. :)
 
