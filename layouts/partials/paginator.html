@@ -4,7 +4,7 @@
   <div class="pagination">
     <ul>
       {{ if $pag.HasPrev }}
-      <a href="{{ $pag.Prev.URL }}" class="previous_page">Prev</a>
+      <a href="{{ $pag.Prev.RelPermalink }}" class="previous_page">Prev</a>
       {{ else }}
       <span class="previous_page disabled">Prev</span>
       {{ end }}
@@ -24,7 +24,7 @@
             {{ if eq . $pag }}
               <em class="current selected" aria-current="true">{{ .PageNumber }}</em>
             {{ else }}
-              <a href="{{ .URL }}">{{ .PageNumber }}</a>
+              <a href="{{ .RelPermalink }}">{{ .PageNumber }}</a>
             {{ end }}
           {{ else if ($.Scratch.Get "__paginator.shouldEllipse") }}
             <span class="gap">…</span>
@@ -32,7 +32,7 @@
       {{ end }}
 
       {{ if $pag.HasNext }}
-      <a href="{{ $pag.Next.URL }}" class="next_page">Next</a>
+      <a href="{{ $pag.Next.RelPermalink }}" class="next_page">Next</a>
       {{ else }}
       <span class="next_page disabled">Next</span>
       {{ end }}
