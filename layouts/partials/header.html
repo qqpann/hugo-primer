@@ -14,7 +14,7 @@
       <div class="Box Box--condensed position-absolute dropdown-content ">
         {{ range .Children }}
         <div class="Box-body" style="">
-          <a href="{{ .URL }}">
+          <a href="{{ .RelPermalink }}">
             {{ .Name }}
           </a>
         </div>
@@ -22,6 +22,7 @@
       </div>
     </div>
     {{ else }}
+    <!-- .URL -->
     <a class="UnderlineNav-item {{ if $currentPage.IsMenuCurrent "main" . }}selected{{ end }}" href="{{ .URL }}">
       {{ .Pre }}
       <span>{{ .Name }}</span>

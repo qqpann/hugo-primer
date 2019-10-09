@@ -24,7 +24,8 @@
             {{ if eq . $pag }}
               <em class="current selected" aria-current="true">{{ .PageNumber }}</em>
             {{ else }}
-              <a href="{{ .RelPermalink }}">{{ .PageNumber }}</a>
+              <!-- .URL -->
+              <a href="{{ .URL }}">{{ .PageNumber }}</a>
             {{ end }}
           {{ else if ($.Scratch.Get "__paginator.shouldEllipse") }}
             <span class="gap">…</span>
