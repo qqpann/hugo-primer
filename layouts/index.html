@@ -13,7 +13,7 @@
   {{ range .Paginator.Pages }}
   <div>
     <div>
-      <a href="{{ .URL }}">
+      <a href="{{ .RelPermalink }}">
         <h3>{{ .Title }}</h3>
       </a>
       <small>{{ .Permalink }}</small>
@@ -28,19 +28,19 @@
     <div class="pagination">
       <ul>
         {{ if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}" class="previous_page">Prev</a>
+        <a href="{{ .Paginator.Prev.RelPermalink }}" class="previous_page">Prev</a>
         {{ else }}
         <span class="previous_page disabled">Prev</span>
         {{ end }}
 
         {{ range .Paginator.Pagers }}
-          <a href="{{ .URL }}">
+          <a href="{{ .RelPermalink }}">
             {{ .PageNumber }}
           </a>
         {{ end }}
 
         {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}" class="next_page">Next</a>
+        <a href="{{ .Paginator.Next.RelPermalink }}" class="next_page">Next</a>
         {{ else }}
         <span class="next_page disabled">Next</span>
         {{ end }}
