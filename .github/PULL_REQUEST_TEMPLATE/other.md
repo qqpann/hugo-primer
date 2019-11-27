@@ -1,6 +1,6 @@
 ---
-name: Bug fix pull request
-about: Create a pull request to fix a bug
+name: Other pull request
+about: Create a pull request of any kind
 title: ''
 assignees: 'qqhann'
 
