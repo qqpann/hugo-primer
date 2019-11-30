@@ -79,6 +79,8 @@ twitter = "your_twitter_id"
 # You can use favicon by addin them manually.
 useIcon = true
 useTwitterCard = true
+# Use MathJax.js. Disabling site-wide and you still can enable in indivisual pages
+math = true
 
 shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
 showFooterCredits = true
