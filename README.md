@@ -31,6 +31,19 @@ hugo server --theme=hugo-primer
 
 ## Usage
 
+### exampleSite
+
+You can refer to `exampleSite/` to get started.
+Reading `exampleSite/_index.md` is good too.
+
+For a quick start:
+
+```sh
+cp -av themes/hugo-primer/exampleSite/* .
+```
+
+### Customizing
+
 #### config.toml
 
 You can configure Hugo-Primer behavior with these params in your blog's `config.toml`. Shown are defaults and most recommended configs.
