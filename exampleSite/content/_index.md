@@ -17,7 +17,7 @@ Visit the [homepage](https://github.com/qqhann/hugo-primer) to try it now, and l
 Use the `exampleSite` as a reference, or copy to quick satart.
 
 As you navicate through the exampleSite menu,
-"About" and "Basic Example" contents are from hugoBasicExample provided by hugo.
+"About" and "Blog Example" contents are from hugoBasicExample provided by hugo.
 
 "Hugo-Primer" is provided by hugo-primer.
 And all of them are optimized to demonstrate how to use hugo-primer.

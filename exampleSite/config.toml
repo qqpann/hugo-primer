@@ -1,11 +1,12 @@
 baseURL = "https://gohugo.io/"
-title = "Hugo Themes"
+title = "Hugo-Primer Theme"
 author = "Steve Francia"
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
+# Above are configs from hugoBasicExample
 
 theme = "hugo-primer"
 hasCJKLanguage = true

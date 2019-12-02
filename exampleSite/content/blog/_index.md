@@ -1,5 +1,5 @@
 ---
-title: "Basic Example"
+title: "Blog Example"
 menu: "main"
 weight: 2
 ---
