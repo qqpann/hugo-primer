@@ -125,7 +125,7 @@ Set keywords for seo.
 
 [ruby annotation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby) allows you to show pronunciation of characters. Ruby in hugo-primer is like this:
 
-![ruby](/images/ruby.png)
+![ruby](https://github.com/qqhann/hugo-primer/blob/master/images/ruby.png)
 
 You just need one line shortcodes code:
 
