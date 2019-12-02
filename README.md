@@ -10,6 +10,7 @@ Try it now, and leave me a star if you like it!
 ![screenshot](https://github.com/qqhann/hugo-primer/blob/master/images/screenshot.png)
 
 ## Features
+
 - [x] Primer css like theme
 - [x] Menu bar header
 - [x] Colored code pen
@@ -19,17 +20,21 @@ Try it now, and leave me a star if you like it!
 - [x] Social Share buttons
 
 ## Installation
-Clone to your theme directory:
-```terminal
-$ git clone https://github.com/qqhann/hugo-primer.git themes/hugo-primer
 
-$ hugo server --theme=hugo-primer
+Clone to your theme directory:
+
+```terminal
+git clone https://github.com/qqhann/hugo-primer.git themes/hugo-primer
+
+hugo server --theme=hugo-primer
 ```
 
 ## Usage
 
 #### config.toml
+
 You can configure Hugo-Primer behavior with these params in your blog's `config.toml`. Shown are defaults and most recommended configs.
+
 ```config.toml
 # config.toml
 
@@ -50,6 +55,7 @@ showFooterCredits = true
 ```
 
 That being said, below is all recommended configuration example.
+
 ```config.toml
 # config.toml
 
@@ -87,7 +93,9 @@ showFooterCredits = true
 ```
 
 #### archetypes/default.md
+
 It is also recommended to remove your site's `archetypes/default.md`, or copy Hugo-Primer's `archetypes/default.md` to your site.
+
 ```archetypes/default.md
 ---
 title: "{{ replace .Name "-" " " | title }}"
@@ -100,7 +108,8 @@ keywords:
 ```
 
 Example usage:
-```
+
+```md
 ---
 categories:
 - Diary
@@ -109,6 +118,7 @@ tags:
 - Health
 ---
 ```
+
 Set keywords for seo.
 
 #### ruby annotation
@@ -119,14 +129,16 @@ Set keywords for seo.
 
 You just need one line shortcodes code:
 
-```
+```html
 {{< ruby rb="深表遗憾" rt="Xi Wen Le Jian" >}}
 
 {{< ruby rb="My heart is broken." rt="I'm happy for that." >}}
 ```
 
 ## Contributing
+
 Issues and PRs are welcome. :)
 
 ## License
+
 MIT
