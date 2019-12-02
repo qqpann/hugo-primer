@@ -1,6 +1,5 @@
 +++
-aliases = ["posts","articles","blog","showcase","docs"]
-title = "Posts"
+title = "Basic Example"
 author = "Hugo Authors"
-tags = ["index"]
+menu =  "main"
 +++
