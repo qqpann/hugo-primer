@@ -1,5 +1,4 @@
 baseURL = "https://gohugo.io/"
-title = "Hugo-Primer Theme"
 author = "Steve Francia"
 paginate = 3
 languageCode = "en"
@@ -8,6 +7,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 # Above are configs from hugoBasicExample
 
+title = "Hugo-Primer Theme"
 theme = "hugo-primer"
 hasCJKLanguage = true
 summaryLength = 70
