@@ -22,6 +22,8 @@ description = "Hugo-Primer theme's example site"
 twitter = ""
 useIcon = false
 useTwitterCard = true
-shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
+# exampleSite must not have share button: #36
+# shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
+shareTo = []
 showFooterCredits = true
 math = true
