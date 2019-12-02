@@ -1,50 +1,26 @@
 baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
 author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
-[menu]
+theme = "hugo-primer"
+hasCJKLanguage = true
+summaryLength = 70
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+googleAnalytics = "UA-12345678-0"
+disqusShortname=""
+copyright = "&copy;Qiushi Pan 2018-2019"
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
-
-[taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
-
-[privacy]
-
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
-
-  [privacy.instagram]
-    disabled = false
-    simple = true
-
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
-[services]
-
-  [services.instagram]
-    disableInlineCSS = true
-
-  [services.twitter]
-    disableInlineCSS = true
-
+[params]
+description = "Hugo-Primer theme's example site"
+twitter = ""
+useIcon = false
+useTwitterCard = true
+shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
+showFooterCredits = true
+math = true
