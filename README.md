@@ -95,7 +95,8 @@ lastmod = ["lastmod", ":fileModTime", ":default"]
 [params]
 description = "Describe what your web page is about"
 twitter = "your_twitter_id"
-# You can use favicon by addin them manually.
+# You can use favicon by adding `favicon-64.png` to `static` directory.
+# You can also add `apple-touch-icon.png` and `pinned-icon.svg`.  
 useIcon = true
 useTwitterCard = true
 # Use MathJax.js. Disabling site-wide and you still can enable in indivisual pages
