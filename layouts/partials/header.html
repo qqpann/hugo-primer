@@ -10,7 +10,7 @@
     {{ if .HasChildren }}
     <div class="flex-column position-relative dropdown" >
       {{ .Pre }}
-      <span class="UnderlineNav-item {{ if $currentPage.HasMenuCurrent "main" . }}selected{{ end }}">{{ .Name }}</span>
+      <span class="UnderlineNav-item{{ if eq $currentPage.RelPermalink (relURL .URL) }} selected{{ end }}">{{ .Name }}</span>
       <div class="Box Box--condensed position-absolute dropdown-content ">
         {{ range .Children }}
         <div class="Box-body" style="">
@@ -23,7 +23,7 @@
     </div>
     {{ else }}
     <!-- .URL -->
-    <a class="UnderlineNav-item {{ if $currentPage.IsMenuCurrent "main" . }}selected{{ end }}" href="{{ .URL }}">
+    <a class="UnderlineNav-item{{ if eq $currentPage.RelPermalink (relURL .URL) }} selected{{ end }}" href="{{ .URL }}">
       {{ .Pre }}
       <span>{{ .Name }}</span>
     </a>
