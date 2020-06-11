@@ -121,19 +121,51 @@ keywords:
 ---
 ```
 
-Example usage:
+#### page-level params
+
+hugo-primer also comes with some custom page level parameters
+
+- __showDate__ (default: __true__)  
+shows the date on a post
+
+- __comments__ (default: __true__)  
+setting to false will hide disqus comments
+
+- __toc__ (default: __true__)  
+display the table of contents
+
+- __categories__ (default: __an empty list__)  
+a list of categories to display in the sidebar
+
+- __tags__ (default: __an empty list__)  
+a list of tags to display in the sidebar
+
+- __math__ (default: __false__)  
+If math.js is disabled for the site you can use this setting to enable it for a single page
+
+- __keywords__ (default: __an empty list__)  
+This adds a metatag to the page for listing keywords. This can be useful for SEO. 
+
+
+Example usage where the defaults are overridden:
 
 ```md
 ---
+showdate: false
+comments: false
+toc: false
 categories:
 - Diary
 tags:
 - Shopping
 - Health
+math: true
+keywords:
+- Cheese
+- Milk
 ---
 ```
 
-Set keywords for seo.
 
 #### ruby annotation
 
