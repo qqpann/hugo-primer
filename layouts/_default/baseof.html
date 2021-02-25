@@ -25,9 +25,9 @@
     <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
     <!-- favicon & touch-icon -->
     {{ if .Site.Params.UseIcon }}
-    <link rel="icon" href="/favicon-64.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="mask-icon" size="any" href="/pinned-icon.svg">
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon-64.png">
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+    <link rel="mask-icon" size="any" href="{{ .Site.BaseURL }}pinned-icon.svg">
     {{ end }}
     <!-- Twitter Card -->
     {{ if .Site.Params.UseTwitterCard }}
