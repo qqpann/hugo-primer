@@ -14,8 +14,9 @@
 {{ range .Paginator.Pages }}
 <div>
   <div>
-    <div align="left">
-      <a href="{{ .URL }}">
+    <div>
+      <a href="{{ .RelPermalink }}">
+
         <h3>{{ .Title }}</h3>
       </a>
     </div>

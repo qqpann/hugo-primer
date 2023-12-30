@@ -1,0 +1,29 @@
+baseURL = "https://gohugo.io/"
+author = "Steve Francia"
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+# Above are configs from hugoBasicExample
+
+title = "Hugo-Primer Theme"
+theme = "hugo-primer"
+hasCJKLanguage = true
+summaryLength = 70
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+googleAnalytics = "UA-12345678-0"
+disqusShortname=""
+copyright = "&copy;Qiushi Pan 2018-2019"
+
+[params]
+description = "Hugo-Primer theme's example site"
+twitter = ""
+useIcon = false
+useTwitterCard = true
+# exampleSite must not have js share widget: #36
+# shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
+shareTo = []
+showFooterCredits = true
+math = true
